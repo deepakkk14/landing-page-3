@@ -9,7 +9,6 @@ const cards = [
 let flippedCards = [];
 let matchedPairs = 0;
 
-// Shuffle function
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -17,7 +16,6 @@ function shuffle(array) {
     }
 }
 
-// Create the game board
 function createBoard() {
     gameBoard.innerHTML = '';
     shuffle(cards);
@@ -33,7 +31,6 @@ function createBoard() {
     });
 }
 
-// Flip card logic
 function flipCard(card) {
     if (flippedCards.length < 2 && !card.classList.contains('flipped')) {
         card.classList.add('flipped');
@@ -45,7 +42,6 @@ function flipCard(card) {
     }
 }
 
-// Check if flipped cards match
 function checkMatch() {
     const [card1, card2] = flippedCards;
     const isMatch = card1.querySelector('.front').textContent === card2.querySelector('.front').textContent;
@@ -65,12 +61,10 @@ function checkMatch() {
     }
 }
 
-// Restart game
 restartButton.addEventListener('click', () => {
     matchedPairs = 0;
     flippedCards = [];
     createBoard();
 });
 
-// Initialize game
 createBoard();
