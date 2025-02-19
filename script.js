@@ -2,8 +2,8 @@ const gameBoard = document.getElementById('gameBoard');
 const restartButton = document.getElementById('restart');
 
 const cards = [
-    '🍎', '🍌', '🍇', '🍓', '🍒', '🍍', '🥝', '🥥', '🍑', '🍏'
-    '🍎', '🍌', '🍇', '🍓', '🍒', '🍍', '🥝', '🥥', '🍑', '🍏'
+    '🍎', '🍌', '🍇', '🍓', '🍒', '🍍', '🥝', '🥥', '🍑', '🍏',
+    '🍎', '🍌', '🍇', '🍓', '🍒', '🍍', '🥝', '🥥', '🍑', '🍏',
 ];
 
 let flippedCards = [];
